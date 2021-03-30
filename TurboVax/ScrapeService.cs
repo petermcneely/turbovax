@@ -52,20 +52,30 @@ namespace TurboVax
                             logger.LogInformation("Task completed");
                             return;
                         }
+                        else if (options.FindAndWait > TimeSpan.Zero)
+                        {
+                            await Task.Delay(options.FindAndWait, stoppingToken);
+                        }
                     }
                     else
                     {
                         logger.LogDebug("Did not find an appointment -- will try again");
                     }
                 }
-                catch (Exception ex)
+                catch (Exception ex) when (!IsCanceled(ex))
                 {
                     logger.LogError(ex, "Encountered an error while scraping");
                 }
                 finally
                 {
-                    await Task.Delay(configuration.GetValue<TimeSpan>("DELAY"), stoppingToken);
+                    try
+                    {
+                        await Task.Delay(configuration.GetValue<TimeSpan>("DELAY"), stoppingToken);
+                    }
+                    catch (Exception ex) when (IsCanceled(ex)) { }
                 }
+
+                static bool IsCanceled(Exception ex) => ex is TaskCanceledException || ex.InnerException is TaskCanceledException;
             }
         }
 

@@ -1,10 +1,10 @@
 {
   "profiles": {
-    "TurboVax": {
+    "find and quit": {
       "commandName": "Project",
       "commandLineArgs": "--find-and-quit true"
     },
-    "Priority Sites": {
+    "find and wait for priority sites": {
       "commandName": "Project",
       "commandLineArgs": "--find-and-wait \"00:05:00\" --portal-names \"Rite Aid #4935 (Park Slope)|Medgar Evers College (Brooklyn residents only)|Duane Reade #14312 (Park Slope)|Walgreens #17772 (Park Slope)\""
     }
