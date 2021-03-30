@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30804.86
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TurboVax", "TurboVax\TurboVax.csproj", "{FA463558-5124-487A-91F3-C58CC4BF5B64}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{FA463558-5124-487A-91F3-C58CC4BF5B64}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FA463558-5124-487A-91F3-C58CC4BF5B64}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FA463558-5124-487A-91F3-C58CC4BF5B64}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FA463558-5124-487A-91F3-C58CC4BF5B64}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {C8CC3739-02CF-4A71-9156-D2A1907AE83D}
+	EndGlobalSection
+EndGlobal
